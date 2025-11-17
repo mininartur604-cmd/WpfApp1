@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="plus"
+            Content="+" 
+            Click="Plus_Click" Margin="53,200,605,161"/>
+        <Button x:Name="minus"
+            Content="-" Margin="242,200,418,0" VerticalAlignment="Top"
+            Click="Minus_Click" Height="73"/>
+        <TextBox x:Name="Frst" HorizontalAlignment="Left" Height="55" Margin="65,83,0,0" TextWrapping="Wrap" Text="Первое число" VerticalAlignment="Top" Width="111" ></TextBox>
+        <TextBlock x:Name="znak" Margin="227,82,463,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51"><Run Language="ru-ru" Text="Знак"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="537,100,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" Width="12"/>
+        <TextBox x:Name="Scnd" HorizontalAlignment="Left" Height="50" Margin="384,83,0,0" TextWrapping="Wrap" Text="Второе число&#xD;&#xA;" VerticalAlignment="Top" Width="116"/>
+        <TextBox x:Name="Rslt" HorizontalAlignment="Left" Height="50" Margin="580,83,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.831,-0.971" />
+        <Button x:Name="umnosh" 
+                Content="*" HorizontalAlignment="Left" Margin="55,301,0,0" VerticalAlignment="Top" Height="80" Width="140"
+                 Click="umnosh_Click">
+        </Button>
+        <Button x:Name="del"
+                Content="/" HorizontalAlignment="Left" Margin="242,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.236,0.236" Height="80" Width="140"
+                Click="del_Click"/>
+        <Button x:Name="step"
+                Content="^" HorizontalAlignment="Left" Margin="436,200,0,0" VerticalAlignment="Top" Height="73" Width="140" 
+                Click="step_Click">
+
+        </Button>
+        <Button x:Name="kor"
+                Content="Корень" HorizontalAlignment="Left" Margin="436,301,0,0" VerticalAlignment="Top"  Width="140"
+                Click="kor_Click" Height="80">
+
+        </Button>
+    </Grid>
+</Window>
