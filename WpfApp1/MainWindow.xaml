@@ -5,35 +5,131 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="plus"
-            Content="+" 
-            Click="Plus_Click" Margin="53,200,605,161"/>
-        <Button x:Name="minus"
-            Content="-" Margin="242,200,418,0" VerticalAlignment="Top"
-            Click="Minus_Click" Height="73"/>
-        <TextBox x:Name="Frst" HorizontalAlignment="Left" Height="55" Margin="65,83,0,0" TextWrapping="Wrap" Text="Первое число" VerticalAlignment="Top" Width="111" ></TextBox>
-        <TextBlock x:Name="znak" Margin="227,82,463,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51"><Run Language="ru-ru" Text="Знак"/><LineBreak/><Run Language="ru-ru"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="537,100,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" Width="12"/>
-        <TextBox x:Name="Scnd" HorizontalAlignment="Left" Height="50" Margin="384,83,0,0" TextWrapping="Wrap" Text="Второе число&#xD;&#xA;" VerticalAlignment="Top" Width="116"/>
-        <TextBox x:Name="Rslt" HorizontalAlignment="Left" Height="50" Margin="580,83,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.831,-0.971" />
-        <Button x:Name="umnosh" 
-                Content="*" HorizontalAlignment="Left" Margin="55,301,0,0" VerticalAlignment="Top" Height="80" Width="140"
-                 Click="umnosh_Click">
-        </Button>
-        <Button x:Name="del"
-                Content="/" HorizontalAlignment="Left" Margin="242,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.236,0.236" Height="80" Width="140"
-                Click="del_Click"/>
-        <Button x:Name="step"
-                Content="^" HorizontalAlignment="Left" Margin="436,200,0,0" VerticalAlignment="Top" Height="73" Width="140" 
-                Click="step_Click">
+        Title="MainWindow" Height="1000" Width="800">
+    <Grid >
+        
+        <Grid>
+            
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        </Button>
-        <Button x:Name="kor"
-                Content="Корень" HorizontalAlignment="Left" Margin="436,301,0,0" VerticalAlignment="Top"  Width="140"
-                Click="kor_Click" Height="80">
+            <TextBlock Text=":3 Тест на политические координаты :3" HorizontalAlignment="Center"  FontFamily="Impact" FontSize="24" Grid.ColumnSpan="2" ></TextBlock>
 
-        </Button>
+            <StackPanel Orientation="Vertical" Margin="5 30 5 5"  Grid.Column="0" >
+                <TextBlock Text="1. С какого по какой год длилась вторая мировая война ?" Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q1_a1" GroupName="question1" Content="1000 - 1100" HorizontalAlignment="Left"     Margin="0 0 0 5"/>
+                <RadioButton x:Name="q1_a2" GroupName="question1" Content="1588 - наши дни" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q1_a3" GroupName="question1" Content="1939 - 1945" HorizontalAlignment="Left"     Margin="0 0 0 5"/>
+                <RadioButton x:Name="q1_a4" GroupName="question1" Content="1967 - 1978" HorizontalAlignment="Left"     Margin="0 0 0 10"/>
+
+                <TextBlock Text="2. Загадка от Жака Фреско: было 2 козла, сколько ? " Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q2_a1" GroupName="question2" Content="я третий" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q2_a2" GroupName="question2" Content="68" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q2_a3" GroupName="question2" Content="Небыло" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q2_a4" GroupName="question2" Content="2" HorizontalAlignment="Left" Margin="0 0 0 10"/>
+
+                <TextBlock Text="3. Сколько косточек в арбузе? " Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q3_a1" GroupName="question3" Content="1" HorizontalAlignment="Left"     Margin="0 0 0 5"/>
+                <RadioButton x:Name="q3_a2" GroupName="question3" Content="14.1" HorizontalAlignment="Left"  Margin="0 0 0 5"/>
+                <RadioButton x:Name="q3_a3" GroupName="question3" Content="Много" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q3_a4" GroupName="question3" Content="Мало" HorizontalAlignment="Left"  Margin="0 0 0 10"/>
+
+                <TextBlock Text="4. Кто убил Марка? " Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q4_a1" GroupName="question4" Content="Я" HorizontalAlignment="Left"     Margin="0 0 0 5"/>
+                <RadioButton x:Name="q4_a2" GroupName="question4" Content="Алиса" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q4_a3" GroupName="question4" Content="Он воскрес в Горгороде 2" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q4_a4" GroupName="question4" Content="Мер" HorizontalAlignment="Left"   Margin="0 0 0 10"/>
+
+                <TextBlock Text="5.Сколько подбородков у 5opka  ? " Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q5_a1" GroupName="question5" Content="я третий" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q5_a2" GroupName="question5" Content="42" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q5_a3" GroupName="question5" Content="1" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q5_a4" GroupName="question5" Content="0" HorizontalAlignment="Left" Margin="0 0 0 10"/>
+
+                <TextBlock Text="6. Почему зонби не становятся шеф поворами ?" Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q6_a1" GroupName="question6" Content="Потому что у них нет просто мозгов" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q6_a2" GroupName="question6" Content="Потому что они сгорают на солнце" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q6_a3" GroupName="question6" Content="Потому что зонби не бывает" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q6_a4" GroupName="question6" Content="Потому что зонби дабалаторию ещё не придумали" HorizontalAlignment="Left" Margin="0 0 0 10"/>
+
+                <TextBlock Text="7. Почему курица перешла дорогу ? " Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q7_a1" GroupName="question7" Content="По земле" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q7_a2" GroupName="question7" Content="Потомук что ей нужно было на другую сторону" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q7_a3" GroupName="question7" Content="Бак БАк АБкбакббак" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q7_a4" GroupName="question7" Content="Она перелетела" HorizontalAlignment="Left" Margin="0 0 0 10"/>
+
+                <TextBlock Text="8. Кто такой Борик ? " Margin="0 0 0 5"></TextBlock>
+                <RadioButton x:Name="q8_a1" GroupName="question8" Content="Наркоман" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q8_a2" GroupName="question8" Content="Плохой человек" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q8_a3" GroupName="question8" Content="Добрый человек" HorizontalAlignment="Left" Margin="0 0 0 5"/>
+                <RadioButton x:Name="q8_a4" GroupName="question8" Content="Тот кто сломал ноутбук Бустеру" HorizontalAlignment="Left" Margin="0 0 0 10"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="5 30 5 5" Grid.Column="1">
+                <TextBlock Text="9. Кто съел рогалик ? " Margin="0 0 0 5"></TextBlock>
+                <ComboBox x:Name="q9" Margin="0 0 0 10">
+                    <ComboBoxItem >Патриция (точно не она)</ComboBoxItem>
+                    <ComboBoxItem >Когами клолик</ComboBoxItem>
+                    <ComboBoxItem >Коната личичка</ComboBoxItem>
+                    <ComboBoxItem >Бесподобная Акира Когами</ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock Text="10. Юбилейный ли это вопрос ? " Margin="0 0 0 5"></TextBlock>
+                <ComboBox x:Name="q10" Margin="0 0 0 10" >
+                    <ComboBoxItem>Да (правильный ответ)</ComboBoxItem>
+                    <ComboBoxItem >Нет</ComboBoxItem>
+                    <ComboBoxItem >Да (неправильный ответ)</ComboBoxItem>
+                    <ComboBoxItem >ДА конечно</ComboBoxItem>
+                </ComboBox>
+                
+                <TextBlock Text="11. Какого числа Толян написал парню Даниеллы Бредбери  ? " Margin="0 0 0 5"></TextBlock>
+                <ComboBox x:Name="q11" Margin="0 0 0 10">
+                    <ComboBoxItem >9/11</ComboBoxItem>
+                    <ComboBoxItem >September seven</ComboBoxItem>
+                    <ComboBoxItem >Он не выходил из-за шкафа</ComboBoxItem>
+                    <ComboBoxItem >11/9</ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock Text="12. Кто сильнее ?" Margin="0 0 0 5"></TextBlock>
+                <ComboBox x:Name="q12" Margin="0 0 0 10">
+                    <ComboBoxItem >Бэтмэн</ComboBoxItem>
+                    <ComboBoxItem >Аллах</ComboBoxItem>
+                    <ComboBoxItem >Пенивайс</ComboBoxItem>
+                    <ComboBoxItem >Деман страха Чорт</ComboBoxItem>
+                </ComboBox>
+               
+                <TextBlock Text="13. 13 счастливое число ?" Margin="0 0 0 5"></TextBlock>
+                <ComboBox x:Name="q13" Margin="0 0 0 10">
+                    <ComboBoxItem>НЕТ!!!!!</ComboBoxItem>
+                    <ComboBoxItem >Да</ComboBoxItem>
+                    <ComboBoxItem >Да это моё счастливое число</ComboBoxItem>
+                    <ComboBoxItem >Да конечно</ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock Text="14. Сколько лет назад славяне прилетели на Землю ?" Margin="0 0 0 5"></TextBlock>
+                <ComboBox x:Name="q14" Margin="0 0 0 10">
+                    <ComboBoxItem>500 тысяч лет назад</ComboBoxItem>
+                    <ComboBoxItem >Они не прилетали</ComboBoxItem>
+                    <ComboBoxItem >3</ComboBoxItem>
+                    <ComboBoxItem>Они вышли из репки</ComboBoxItem>
+                </ComboBox>
+
+                <TextBlock Text="15. Выберите лишнего проказника." Margin="0 0 0 5"></TextBlock>
+                <ComboBox x:Name="q15" Margin="0 0 0 10">
+                    <ComboBoxItem >Гарри Поттер</ComboBoxItem>
+                    <ComboBoxItem >Рон Уизли</ComboBoxItem>
+                    <ComboBoxItem >Гермиона Грейнджер</ComboBoxItem>
+                    <ComboBoxItem >Драко Малфой</ComboBoxItem>
+                </ComboBox>
+               
+                <Button Content="Получить результат" FontFamily="Impact" FontSize="24" Margin="0 10 0 10" Click="Button_Click " ></Button >
+                <Image x:Name="image1"/>
+                <TextBlock x:Name="result" Text="" Margin="0 10 0 5" FontFamily="Impact" FontSize="20" HorizontalAlignment="Center"  ></TextBlock>
+            </StackPanel>
+        </Grid>
+
     </Grid>
+    
 </Window>
